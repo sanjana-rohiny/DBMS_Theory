@@ -1,0 +1,4 @@
+Design an ER diagram for the following scenario: UPS prides itself on having update information on processing and current location of each shipped item. 
+To do this, UPS relies on a company wide information system. Shipped items can be characterized by item  number(unique),weight,dimensions,insuranceamount,destination and final delivery date.Shipped items are received into ups system at a single retail center. Retail Centers are characterized by their type, unique ID and address. Shipped items make their way to the destination via one or more standard UPS
+transportation events. These transportation events are characterized by unique schedule Number, type and delivery route. Model this scenario bv identifying
+Entities, Attributes ,Primary Keys, Relationship and Cardinality

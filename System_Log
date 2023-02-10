@@ -1,0 +1,33 @@
+
+     T1
+	Begin
+	Read(X)
+	X=X+10
+	Write(X)
+	Commit
+----------------------------------------------------	
+	
+-- Transaction Log Start --
+[START_TRANSACTION, T1]
+    Timestamp: 2024-05-31T12:00:00Z
+    Description: Start of transaction T1
+
+[READ_ITEM, T1, X]
+    Timestamp: 2024-05-31T12:00:01Z
+    Description: Read the current value of item X
+    ItemID: X
+    CurrentValue: 100
+
+[WRITE_ITEM, T1, X, 100, 110]
+    Timestamp: 2024-05-31T12:00:02Z
+    Description: Write new value to item X
+    ItemID: X
+    OldValue: 100
+    NewValue: 110
+
+[COMMIT, T1]
+    Timestamp: 2024-05-31T12:00:03Z
+    Description: Commit transaction T1
+
+-- Transaction Log End --
+
