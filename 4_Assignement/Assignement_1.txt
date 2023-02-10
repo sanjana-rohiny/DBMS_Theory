@@ -1,0 +1,27 @@
+1. What are the types of a Database System ?.
+
+2. Define DBMS and explan its 4 operaions.
+
+   Explain with suitable diagrams
+
+3. Differentiate Catalog and Metadata
+
+4. Explain Database System Environment with suitable diagram.
+
+5. What are Characteristics of the Database Approach ?.
+
+   Explain each one with suitable example ?
+
+6. what are the advantages and disadvantages of dbms ?
+
+7. What are the roles and responsibility of DBA ?
+
+7. What are the roles and responsibility of Database Designer ?
+
+8. Explain Data models ?
+
+9. Illustrate with an example, the difference between the conceptual data models and the physical data models
+
+10. With neat diagram explain the 3 schema architecture
+
+Submit the answers written in notebook by 15/2/23, Wednessday

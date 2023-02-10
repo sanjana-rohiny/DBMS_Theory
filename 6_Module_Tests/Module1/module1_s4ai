@@ -1,0 +1,18 @@
+Part A:
+1. Distinguish between total participation & partial participation with example ? (3 Mark)
+2. What is Cardinalty Ratio ?. Explain with examples. (3 Mark)
+
+Part B:
+3. With the help of neat diagram explain 3 schema architecture ? (5 Mark)
+
+4. What are the characteristics of DBMS ? (5 Mark)
+	Self-describing nature of a database system
+	Insulation between programs and data, and data abstraction
+	Support of multiple views of the data
+	Sharing of data and multiuser transaction processing
+5. What are the roles and responsibility of DBA ? (4 Mark)
+	Schema definition.
+	Storage structure and access-method definition
+	Schema and physical-organization modification
+	Granting of authorization for data access.
+	Routine Maintenance:

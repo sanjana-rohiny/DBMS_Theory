@@ -1,0 +1,15 @@
+PART A:
+What is Cardinalty Ratio ?. Explain with examples. (3 Mark)
+With the help of neat diagram explain 3 schema architecture ? (3 Mark)
+
+Part B:
+Construct an ER Diagram for Company having following details:
+    • Company organized into DEPARTMENT. Each department has unique name and a particular employee who manages the department. Start date for the manager is recorded. Department may have several locations. 
+    • A department controls a number of PROJECT. Projects have a unique name, number and a single location. 
+    • Company’s EMPLOYEE name, ssno, address, salary, sex and birth date are recorded. An employee is assigned to one department, but may work for several projects (not necessarily controlled by her dept). Number of hours/week an employee works on each project is recorded; The immediate supervisor for the employee.
+    • Employee’s DEPENDENT are tracked for health insurance purposes (dependent name, birthdate, relationship to employee).
+Express in MIN-MAX notation 
+
+entity-attrib - 5
+relation - 5
+min-max - 4
