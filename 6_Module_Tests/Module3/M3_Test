@@ -1,0 +1,23 @@
+1. What are nested queries ? Explain with suitable examples ? 
+2. Explain Views ?. Give SQL command to create View ?
+3. Explain Assertions ?. Give SQL command to create Assertion ?
+4. Explain Triggers ?. Give an example for automatically 
+	update 'Total' field on insert record on below Schema.  
+ 	Student(id, name, subject1, subject2, subject3, Total)
+5. Schema
+	EMPLOYEE(Fname,  Minit, Lname, Ssn, Bdate, Address, Sex, Salary, Super_ssn, Dno)
+	DEPARTMENT(Dname, Dnumber, Mgr_ssn, Mgr_start_date)
+            1. Display the details of those who draw the salary greater than the average salary.
+            2. Retrieve the name and address of all employees who work for the ‘Research’ department.
+            	
+6. Ordered file with 30,000 records and stored on a disk of block size 1024 bytes,
+	unspanned organization. Record length = 100 bytes.
+	a. Find Blocking factor,
+	b. No. of blocks needed for the file,
+	c. How many block access if using a primary index file, with an
+		ordering key field of the file 9 bytes and 
+		block pointer size 6 bytes.
+
+1,2,3,4 -> 3 Marks
+5,6 -> 4 Marks
+
