@@ -124,3 +124,90 @@ select * from Student;
 +----+-------+----------+----------+----------+-------+------------+
 |  1 | Alice |       20 |       20 |       20 |    60 |         36 |
 +----+-------+----------+----------+----------+-------+------------+*/
+CREATE TABLE account (account_number INT PRIMARY KEY, branch_name VARCHAR(255), balance int);
+CREATE TABLE depositor (customer_name VARCHAR(255), account_number INT, FOREIGN KEY (account_number) REFERENCES account(account_number));
+CREATE TABLE customer (customer_name VARCHAR(255) PRIMARY KEY, customer_address VARCHAR(255));
+
+insert into account values(1,'TVM',100000);
+insert into account values(2,'TVM',200000);
+insert into account values(3,'TVM',300000);
+insert into account values(4,'TVM',400000);
+insert into account values(5,'Cochin',500000);
+
+insert into customer values('Alice', 'Address1');
+insert into customer values('Bob', 'Address2');
+insert into customer values('Cindy', 'Address3');
+
+insert into depositor values('Alice', 1);
+insert into depositor values('Alice', 2);
+insert into depositor values('Alice', 3);
+insert into depositor values('Bob', 4);
+insert into depositor values('Cindy', 5);
+
+/*
++----------------+-------------+---------+
+| account_number | branch_name | balance |
++----------------+-------------+---------+
+|              1 | TVM         |  100000 |
+|              2 | TVM         |  200000 |
+|              3 | TVM         |  300000 |
+|              4 | TVM         |  400000 |
+|              5 | Cochin      |  500000 |
++----------------+-------------+---------+
+5 rows in set (0.00 sec)
+
+mysql> select * from customer;
++---------------+------------------+
+| customer_name | customer_address |
++---------------+------------------+
+| Alice         | Address1         |
+| Bob           | Address2         |
+| Cindy         | Address3         |
++---------------+------------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from depositor;
++---------------+----------------+
+| customer_name | account_number |
++---------------+----------------+
+| Alice         |              1 |
+| Alice         |              2 |
+| Alice         |              3 |
+| Bob           |              4 |
+| Cindy         |              5 |
++---------------+----------------+
+5 rows in set (0.00 sec)
+
+*/
+
+CREATE TABLE account (account_number INT PRIMARY KEY, branch_name VARCHAR(255), balance int);
+CREATE TABLE depositor (customer_name VARCHAR(255), account_number INT, FOREIGN KEY (account_number) REFERENCES account(account_number));
+CREATE TABLE customer (customer_name VARCHAR(255) PRIMARY KEY, customer_address VARCHAR(255));
+
+
+DELIMITER //
+CREATE  TRIGGER Trigger1234
+AFTER DELETE ON account
+FOR EACH ROW
+BEGIN
+declare 
+	c_name varchar(30);
+	
+	select customer_name into c_name from depositor where  account_number = old.account_number;
+
+	if (select count(*) from depositor d where d.customer_name = c_name ) > 1 then
+		signal sqlstate '45000' set message_text = 'Error..!  Delete Not Allowed in depositor table: Customer has more accounts ';
+	else
+		DELETE FROM depositor WHERE account_number = old.account_number;
+	end if;
+END
+//
+DELIMITER ; 
+
+
+-- Testing trigger
+DELETE FROM account WHERE acc_no = 2;
+-- 
+
+
+

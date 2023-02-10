@@ -1,0 +1,27 @@
+Hierarchical data model
+========================
+IBM Information Management System (IMS)
+    Developed by IBM in the 1960s, 
+    it was initially created to support the Apollo space program
+
+Network data model
+========================
+Integrated Data Store (IDS)
+
+    Developer: Charles Bachman and his team at General Electric.
+    Introduction: Early 1960s.
+    
+    
+    
+==============================================================
+Storage definition language (SDL): is used to specify the internal schema.
+In most relational DBMSs today, there is no specific language that
+performs the role of SDL. Instead, the internal schema is specified by a combination
+of functions, parameters, and specifications related to storage
+
+
+data definition language (DDL): conceptual and internal schemas
+
+the view definition language (VDL), to specify user views and their mappings to the
+conceptual schema, but in most DBMSs the DDL is used to define both conceptual
+and external schemas.

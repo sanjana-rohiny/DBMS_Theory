@@ -32,18 +32,18 @@ desc DEP;
 +-------+-------------+------+-----+---------+-------+
 */
 insert into DEP(dno, dname, block) values
-									('D100', 'HR', 'MG BLOCK'),
-									('D103', 'Logistics', 'CVR BLOCK'),
-									('D104', 'Banking', 'VKN BLOCK'),
-									('D105', 'Marketing', 'PJN BLOCK'),
-									('D101', 'Finance', 'APJ BLOCK');
+				('D100', 'HR', 'MG BLOCK'),
+				('D103', 'Logistics', 'CVR BLOCK'),
+				('D104', 'Banking', 'VKN BLOCK'),
+				('D105', 'Marketing', 'PJN BLOCK'),
+				('D101', 'Finance', 'APJ BLOCK');
 
 insert into Staff (sno, name, salary, position, dno) values
-									('SL100', 'John', 30000, 'Manager', 'D100'),
-									('SL101', 'Susan', 4000, 'Manager', 'D101'),
-									('SL102', 'David', 12000, 'Project Manager', 'D102'),
-									('SL103', 'Ann', 5000, 'Project Manager', 'D103'),
-									('SL104', 'Mary', 9000, 'Project Manager', 'D101');
+				('SL100', 'John', 30000, 'Manager', 'D100'),
+				('SL101', 'Susan', 4000, 'Manager', 'D101'),
+				('SL102', 'David', 12000, 'Project Manager', 'D102'),
+				('SL103', 'Ann', 5000, 'Project Manager', 'D103'),
+				('SL104', 'Mary', 9000, 'Project Manager', 'D101');
 
 select * from Staff;
 /*
